@@ -1,0 +1,75 @@
+body{
+    background-color: #F7ECDE;
+    /* padding: 0 50px; */
+}
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+a{
+    text-decoration: none;
+
+}
+h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    font-style: normal;
+    color: #352e28;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    cursor: default;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #FEC260;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+h1:hover::before{
+    height: 40px;
+}
+h2{
+    font-family: "Righteous", cursive;
+    font-weight: bold;
+    font-size: 25px;
+    width: fit-content;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+@media (max-width:455px) {
+    h2{
+        font-size: 20px;
+    }
+}
+.dotted{
+    width: 100%;
+    border-bottom: 2px dotted black;
+}
+form > div  label{
+    display: flex;
+    align-items: center;
+}
+form > div label h4{
+    display: flex;
+    align-items: center;
+    font-family: "PT Sans Caption", sans-serif;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #fec260;
+    outline: 0;
+    box-shadow: 0 0 10px 1px #fec260;
+}
